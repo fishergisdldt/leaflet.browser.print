@@ -347,8 +347,8 @@ L.Control.BrowserPrint = L.Control.extend({
                 }
             }
         }
-
-		if (!fitBounds) {
+                //fitBounds may not none,but has no data,use _southWest to inditify
+		if (!fitBounds ||fitBounds._southWest==undefined) {
 			fitBounds = this._map.getBounds();
 		}
 
